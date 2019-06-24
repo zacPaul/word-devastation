@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const dictionaryController = require('./controllers/dictionary/dictionaryController');
+const dictionaryController = require('./resources/dictionary/controller');
 const app = express();
 
 // middleware
@@ -13,6 +13,6 @@ app.use((req, _res, next) => {
 
 // routes
 app.get('/', dictionaryController.getRandomDefinition);
-app.get('/word', dictionaryController.getWordById);
+//app.get('/word', dictionaryController.getWordById);
 
-modules.exports = app;
+module.exports = app;

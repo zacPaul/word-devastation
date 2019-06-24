@@ -1,25 +1,23 @@
 <html>
     <head>
-
+        <link rel="stylesheet" href="public/css/style.css">
+        <title>Word Blaster</title>
     </head>
     <body>
-        <section>
-            <div id="results">
-                
+        <div class="container">
+            <div id="hud">
+                    <div id="score"></div>
             </div>
-        </section>
+            
+            <div id="answer">CLICK THIS SCREEN AND<br>PRESS ENTER TO START</div>            
+            <div id="guesses"></div>
+            <div id="count"></div>
+        </div>
+
         <footer>
-            <script>
-                fetch('http://localhost:3000/')
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(def) {
-                    document.querySelector('#results').innerHTML = `<pre>${JSON.stringify(def, null, 2)}</pre>`;
-                    console.log(def);
-                });
-                
-            </script>
-        </footer>
+                <script src="public/js/logic.js"></script>
+            </footer>
     </body>
 </html>
+
+
